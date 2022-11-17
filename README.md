@@ -78,4 +78,6 @@ Seperti pada bahasa pemrograman umumnya dart juga mendukung variabel yang bersif
 
 ### Jelaskan bagaimana cara kerja Navigator dalam "mengganti" halaman dari aplikasi Flutter.
 
+Navigator pada flutter serupa dengan implementasi stack. Sehingga jika melakukan "push" akan menuju suatu halaman dan untuk mengembalikannya menggunakan "pop". "push" menambahkan halaman pada antrian teratas stack dan "pop" mengurangi halaman pada antrian stack.
+
 ### Jelaskan bagaimana cara kamu mengimplementasikan _checklist_ di atas.
