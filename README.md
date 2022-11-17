@@ -22,13 +22,13 @@ Perbedaan dari stateless widget dan stateful widget:* Stateless widget dapat ber
 
 ### Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
 
-* Scaffold, sebagai landasan halaman
-* AppBar(), biasanya menjadi judul (dari sebuah aplikasi atau halaman)
-* Center(), semua Widget yang ada didalam Widget ini akan diletakkan di bagian tengah
-* Column(), semua widget yang ada didalam widget ini akan ditampilkan secara vertical
-* Row(), semua widget yang ada didalam widget ini akan ditampilkan secara horizontal
-* Text(), menampilkan teks dan memberikan style pada teks
-* FloatingActionButton(), menampilkan button floating
+* `Scaffold`, sebagai landasan halaman
+* `AppBar()`, biasanya menjadi judul (dari sebuah aplikasi atau halaman)
+* `Center()`, semua Widget yang ada didalam Widget ini akan diletakkan di bagian tengah
+* `Column()`, semua widget yang ada didalam widget ini akan ditampilkan secara vertical
+* `Row()`, semua widget yang ada didalam widget ini akan ditampilkan secara horizontal
+* `Text()`, menampilkan teks dan memberikan style pada teks
+* `FloatingActionButton()`, menampilkan button floating
 * dll
 
 ### Apa fungsi dari `setState()`? Jelaskan variabel apa saja yang dapat terdampak dengan fungsi tersebut.
@@ -56,20 +56,25 @@ Seperti pada bahasa pemrograman umumnya dart juga mendukung variabel yang bersif
 
 ### Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
 
-- `Drawer` berfungsi sebagai menu drawer untuk pindah ke tampilan atau page lain
-- `TextFormField` berfungsi untuk ask input text
-- `Form` -> Membuat sebuah container untuk dijadikan parent dari input input yang dideklarasikan
-- `ListTile` -> component yang didalamnya juga bisa digunakan widget
-- `Padding` berfungsi untuk menampilkan child-nya dengan padding tertentu. 
-- `Row` berfungsi untuk  menampilkan child-nya ke tata letak yang horizontal. 
-- `Column` berfungsi untuk  menampilkan child-nya ke tata letak yang vertikal. 
-- `DropdownButtonTextField` berfungsi untuk membuat form field untuk user memilih input
-- `Text` berfungsi untuk menampilkan text
-- `TextStyle` berfungsi untuk melakukan styling terhadap text
-- `Container` berfungsi sebagai tempat untuk menampung komponen
-- `TextButton` berfungsi untuk membuat tombol dengan text tertentu
+* `Drawer` berfungsi sebagai menu drawer untuk pindah ke tampilan atau page lain
+* `TextFormField` berfungsi untuk ask input text
+* `Form` -> Membuat sebuah container untuk dijadikan parent dari input input yang dideklarasikan
+* `ListTile` -> component yang didalamnya juga bisa digunakan widget
+* `Padding` berfungsi untuk menampilkan child-nya dengan padding tertentu. 
+* `Row` berfungsi untuk  menampilkan child-nya ke tata letak yang horizontal. 
+* `Column` berfungsi untuk  menampilkan child-nya ke tata letak yang vertikal. 
+* `DropdownButtonTextField` berfungsi untuk membuat form field untuk user memilih input
+* `Text` berfungsi untuk menampilkan text
+* `TextStyle` berfungsi untuk melakukan styling terhadap text
+* `Container` berfungsi sebagai tempat untuk menampung komponen
+* `TextButton` berfungsi untuk membuat tombol dengan text tertentu
 
 ### Sebutkan jenis-jenis event yang ada pada Flutter (contoh: `onPressed`).
+
+* `onChanged` adalah untuk mengeksekusi jika sebuah widget diubah. 
+* `onFocusChanged` adalah untuk mengeksekusi jika fokus berubah. 
+* `onSaved` adalah untuk mengeksekusi jika sebuah widget disiimpan. onHover adalah untuk mengeksekusi jika pointer bergerak dalam sebuah widget. 
+* `onPressed` adalah untuk mengeksekusi jika sebuah widget diklik.
 
 ### Jelaskan bagaimana cara kerja Navigator dalam "mengganti" halaman dari aplikasi Flutter.
 
