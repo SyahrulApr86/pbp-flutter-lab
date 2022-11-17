@@ -56,6 +56,19 @@ Seperti pada bahasa pemrograman umumnya dart juga mendukung variabel yang bersif
 
 ### Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
 
+- `Drawer` berfungsi sebagai menu drawer untuk pindah ke tampilan atau page lain
+- `TextFormField` berfungsi untuk ask input text
+- `Form` -> Membuat sebuah container untuk dijadikan parent dari input input yang dideklarasikan
+- `ListTile` -> component yang didalamnya juga bisa digunakan widget
+- `Padding` berfungsi untuk menampilkan child-nya dengan padding tertentu. 
+- `Row` berfungsi untuk  menampilkan child-nya ke tata letak yang horizontal. 
+- `Column` berfungsi untuk  menampilkan child-nya ke tata letak yang vertikal. 
+- `DropdownButtonTextField` berfungsi untuk membuat form field untuk user memilih input
+- `Text` berfungsi untuk menampilkan text
+- `TextStyle` berfungsi untuk melakukan styling terhadap text
+- `Container` berfungsi sebagai tempat untuk menampung komponen
+- `TextButton` berfungsi untuk membuat tombol dengan text tertentu
+
 ### Sebutkan jenis-jenis event yang ada pada Flutter (contoh: `onPressed`).
 
 ### Jelaskan bagaimana cara kerja Navigator dalam "mengganti" halaman dari aplikasi Flutter.
