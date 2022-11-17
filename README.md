@@ -52,6 +52,8 @@ Seperti pada bahasa pemrograman umumnya dart juga mendukung variabel yang bersif
 
 ### Jelaskan perbedaan `Navigator.push` dan `Navigator.pushReplacement`.
 
+`Navigator.pushReplacement` merupakan metode push yang membuang rute sebelumnya sehingga jika berpindah halaman tidak dapat kembali ke halaman sebelumnya. `Navigator.push` merupakan metode push untuk menambahkan rute lain ke atas tumpukan, jadi menampilkan halaman baru dan tetap dapat mengakses halaman sebelumnya.
+
 ### Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
 
 ### Sebutkan jenis-jenis event yang ada pada Flutter (contoh: `onPressed`).
