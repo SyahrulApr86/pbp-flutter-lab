@@ -81,3 +81,14 @@ Seperti pada bahasa pemrograman umumnya dart juga mendukung variabel yang bersif
 Navigator pada flutter serupa dengan implementasi stack. Sehingga jika melakukan "push" akan menuju suatu halaman dan untuk mengembalikannya menggunakan "pop". "push" menambahkan halaman pada antrian teratas stack dan "pop" mengurangi halaman pada antrian stack.
 
 ### Jelaskan bagaimana cara kamu mengimplementasikan _checklist_ di atas.
+
+1. Menambahkan file `form.dart` untuk page Form Budget dan file `show.dart` untuk page Data Budget
+2. Menambahkan drawer dalam build pada `main.dart`, `form.dart`, dan `show.dart`, yang berfungsi untuk navigasi ke page lainnya.
+3. Membuat class Budget yang berisi dengan atribut-atribut dari form budget tersebut dan constructornya.
+4. Membuat validator untuk memeriksa apakah text field numerik untuk input nominal budget.
+5. Membuat form dalam halaman Form Budget dengan menambahkan widget-widget seperti seperti `TextFormField`, `DropdownButtonFormField`, `TextButton`, dan lain-lain seperti yang sudah dijelaskan pada soal nomor 2.
+6. Menambahkan data-data dari budget melalui `ListView` Builder
+
+
+
+
