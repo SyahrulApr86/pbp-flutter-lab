@@ -46,3 +46,16 @@ Seperti pada bahasa pemrograman umumnya dart juga mendukung variabel yang bersif
 3. Membuat fungsi untuk melakukan decrement pada counter.
 4. Menambahkan kode di bawah ini (sebagai children dari Column) untuk mengubah text beserta stylingnya jika nilai counter adalah ganjil atau genap.
 5. Menambahkan kode untuk membuat FloatingActionButton yang memicu increment dan decrement dari counter.
+
+
+## Tugas 8: Flutter Form
+
+### Jelaskan perbedaan `Navigator.push` dan `Navigator.pushReplacement`.
+
+### Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+
+### Sebutkan jenis-jenis event yang ada pada Flutter (contoh: `onPressed`).
+
+### Jelaskan bagaimana cara kerja Navigator dalam "mengganti" halaman dari aplikasi Flutter.
+
+### Jelaskan bagaimana cara kamu mengimplementasikan _checklist_ di atas.
