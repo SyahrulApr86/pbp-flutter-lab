@@ -1,8 +1,10 @@
 import 'package:counter_7/main.dart';
 import 'package:flutter/material.dart';
-import 'package:counter_7/show.dart';
-RegExp _numeric = RegExp(r'^-?[0-9]+$');
+import 'package:counter_7/page/show.dart';
+import 'package:counter_7/page/mywatchlist_page.dart';
+import 'package:counter_7/model/mywatchlist.dart';
 
+RegExp _numeric = RegExp(r'^-?[0-9]+$');
 
 class MyFormPage extends StatefulWidget {
   const MyFormPage({super.key});
@@ -17,8 +19,8 @@ class Budget {
   String jenisBudget;
   static List<Budget> listBudget = [];
 
-  Budget(String this.judulBudget, int this.nominalBudget, String this.jenisBudget);
-
+  Budget(
+      String this.judulBudget, int this.nominalBudget, String this.jenisBudget);
 }
 
 bool isNumeric(String str) {
@@ -36,6 +38,8 @@ class _MyFormPageState extends State<MyFormPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        // Here we take the value from the MyHomePage object that was created by
+        // the App.build method, and use it to set our appbar title.
         title: Text('Form Budget'),
       ),
       drawer: Drawer(
@@ -69,6 +73,17 @@ class _MyFormPageState extends State<MyFormPage> {
                 Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(builder: (context) => const MyShowPage()),
+                );
+              },
+            ),
+            ListTile(
+              title: const Text('My Watchlist'),
+              onTap: () {
+                // Route menu ke halaman form
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const MyWatchlistPage()),
                 );
               },
             ),
@@ -147,8 +162,7 @@ class _MyFormPageState extends State<MyFormPage> {
                     validator: (String? value) {
                       if (value == null || value.isEmpty) {
                         return 'Nominal tidak boleh kosong!';
-                      }
-                      else if (!isNumeric(value) ){
+                      } else if (!isNumeric(value)) {
                         return 'Nominal harus berupa angka!';
                       }
                       return null;
@@ -164,7 +178,7 @@ class _MyFormPageState extends State<MyFormPage> {
                         _jenisBudget = value!;
                       });
                     },
-                    items: _listJenis.map((String jenis){
+                    items: _listJenis.map((String jenis) {
                       return DropdownMenuItem(
                         value: jenis,
                         child: Text(jenis),
@@ -192,7 +206,8 @@ class _MyFormPageState extends State<MyFormPage> {
                       ),
                       onPressed: () {
                         if (_formKey.currentState!.validate()) {
-                          Budget budget = Budget(_judulBudget, _nominalBudget, _jenisBudget!);
+                          Budget budget = Budget(
+                              _judulBudget, _nominalBudget, _jenisBudget!);
                           Budget.listBudget.add(budget);
                           _formKey.currentState?.reset();
                           showDialog(
@@ -205,14 +220,16 @@ class _MyFormPageState extends State<MyFormPage> {
                                 elevation: 15,
                                 child: Container(
                                   child: ListView(
-                                    padding: const EdgeInsets.only(top: 20, bottom: 20),
+                                    padding: const EdgeInsets.only(
+                                        top: 20, bottom: 20),
                                     shrinkWrap: true,
                                     children: <Widget>[
                                       Center(
-                                          child: Padding(
-                                              padding: const EdgeInsets.all(20.0),
-                                              child: const Text('Data berhasil disimpan!')),
-                                          ),
+                                        child: Padding(
+                                            padding: const EdgeInsets.all(20.0),
+                                            child: const Text(
+                                                'Data berhasil disimpan!')),
+                                      ),
                                       TextButton(
                                         onPressed: () {
                                           Navigator.pop(context);

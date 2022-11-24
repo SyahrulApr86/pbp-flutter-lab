@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:counter_7/form.dart';
+import 'package:counter_7/page/form.dart';
 import 'package:counter_7/main.dart';
+import 'package:counter_7/page/mywatchlist_page.dart';
+import 'package:counter_7/model/mywatchlist.dart';
 
 class MyShowPage extends StatefulWidget {
   const MyShowPage({super.key});
@@ -50,6 +52,17 @@ class _MyShowPageState extends State<MyShowPage> {
                 );
               },
             ),
+            ListTile(
+              title: const Text('My Watchlist'),
+              onTap: () {
+                // Route menu ke halaman form
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const MyWatchlistPage()),
+                );
+              },
+            ),
           ],
         ),
       ),
@@ -67,39 +80,34 @@ class _MyShowPageState extends State<MyShowPage> {
                       child: Text(
                         Budget.listBudget[index].judulBudget,
                         style: const TextStyle(fontSize: 20.0),
+                      ),
                     ),
-
-                  ),
-
                   ),
                 ),
                 Container(
-                  child: Padding(
+                    child: Padding(
                   padding: const EdgeInsets.all(9.0),
-                  child: Row(
-                      children: [
-                        Expanded(
-                          child: Align(
-                            alignment: Alignment.bottomLeft,
-                            child: Text(
-                                Budget.listBudget[index].nominalBudget.toString(),
-                                style: const TextStyle(fontSize: 14.0),
-                            ),
-                          ),
+                  child: Row(children: [
+                    Expanded(
+                      child: Align(
+                        alignment: Alignment.bottomLeft,
+                        child: Text(
+                          Budget.listBudget[index].nominalBudget.toString(),
+                          style: const TextStyle(fontSize: 14.0),
                         ),
-                        Expanded(
-                          child: Align(
-                            alignment: Alignment.bottomRight,
-                            child: Text(
-                              Budget.listBudget[index].jenisBudget,
-                              style: const TextStyle(fontSize: 14.0),
-                            ),
-                          ),
+                      ),
+                    ),
+                    Expanded(
+                      child: Align(
+                        alignment: Alignment.bottomRight,
+                        child: Text(
+                          Budget.listBudget[index].jenisBudget,
+                          style: const TextStyle(fontSize: 14.0),
                         ),
-
+                      ),
+                    ),
                   ]),
-                  )
-                )
+                ))
               ]),
             );
           },
