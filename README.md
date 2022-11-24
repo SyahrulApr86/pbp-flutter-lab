@@ -89,6 +89,38 @@ Navigator pada flutter serupa dengan implementasi stack. Sehingga jika melakukan
 5. Membuat form dalam halaman Form Budget dengan menambahkan widget-widget seperti seperti `TextFormField`, `DropdownButtonFormField`, `TextButton`, dan lain-lain seperti yang sudah dijelaskan pada soal nomor 2.
 6. Menambahkan data-data dari budget melalui `ListView` Builder
 
+## Tugas 9: Integrasi Web Service pada Flutter
+
+### Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+
+Pengambilan data **JSON** tanpa membuat model dapat dilakukan. Secara behavioral, **JSON** sendiri merupakan suatu object dalam **notasi Javascirpt** di mana pada bahasa Dart, hal tersebut **ekuivalen** dengan **Map** di mana object yang terdiri dari *key* dengan *value pair*. Namun, pengambilan data JSON tanpa melakukan konversi ke dalam suatu model ***bukan merupakan best practice*** dalam pengimplementasiannya. Konversi data JSON ke dalam suatu model bertujuan untuk **meminimalisir kesalahan** pengambilan atau pengiriman data melalui http request yang akan ditampilkan pada sisi UI aplikasi.
+
+###  Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+
+1. FutureBuilder() = widget yang membangun dirinya sendiri berdasarkan interaksi snapshot terakhir dengan `Future`.
+2. MyWatchDetail() = widget yang digunakan untuk menampilkan detail dari mywatch
+3. RichText() = widget yang dapat menampilkan text dengan menggunakan beberapa *style* yang berbeda.
+4. GestureDetector() = widget yang dapat mendeteksi gestur pengguna.
+5. ListTile() = Widget yang merepresentasikan satu baris dengan tinggi tetap.
+6. CheckboxListTile() = `ListTile` dengan `Checkbox`.
+
+###  Jelaskan mekanisme pengambilan data dari json hingga dapat ditampilkan pada Flutter.
+
+1. Membuat sebuah function **http request** dengan method `GET` secara *async* untuk mengambil data ke pihak eksternal
+2. Pada function tersebut lakukan parsing dengan `jsonDecode()` untuk mengubah response **String** menjadi **JSON**
+3. Konversi object  **JSON** ke dalam suatu **Model object**
+4. Gunakan widget `FutrueBuilder` untuk menampilkan widget-widget dengan snapshot data terbaru yang telah dikonversi menjadi sebuah object
+
+###  Jelaskan bagaimana cara kamu mengimplementasikan _checklist_ di atas.
+
+1. Menambahkan tombol navigasi pada drawer/hamburger untuk ke halaman mywatchlist.<br>
+2. Membuat satu file dart yang berisi model mywatchlist<br>
+3. Menambahkan halaman mywatchlist yang berisi semua watch list yang ada pada endpoint JSON di Django pada [Tugas 3](https://tugas-pbp-syahrul.herokuapp.com/mywatchlist/json/)<br>
+4. Membuat navigasi dari setiap judul watch list ke halaman detail<br>
+5. Menambahkan halaman detail untuk setiap mywatchlist<br>
+6. Menambahkan tombol untuk kembali ke daftar mywatchlist<br>
+
+
 
 
 
