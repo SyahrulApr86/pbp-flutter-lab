@@ -86,7 +86,7 @@ class _DetailPageState extends State<DetailPage> {
               // style: TextStyle(color: Colors.blue),
             ),
             Text(
-              'Status: ${models.watched == Watched.DONE ? 'Watched' : 'Not yet'}',
+              'Status: ${models.watched == Watched.DONE ? 'Yes' : 'Not Yet'}',
               // style: TextStyle(color: Colors.blue),
             ),
             Text(

@@ -67,8 +67,8 @@ class Fields {
 enum Watched { DONE, NOT_YET }
 
 final watchedValues = EnumValues({
-  "Done": Watched.DONE,
-  "Not yet": Watched.NOT_YET
+  "Yes": Watched.DONE,
+  "Not Yet": Watched.NOT_YET
 });
 
 enum Model { MYWATCHLIST_MYWATCHLIST }
