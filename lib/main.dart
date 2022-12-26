@@ -172,20 +172,19 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                if (_counter > 0)
-                  Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.only(left: 30.0),
-                      child: Align(
-                        alignment: Alignment.bottomLeft,
-                        child: FloatingActionButton(
-                          onPressed: _decrementCounter,
-                          tooltip: 'Decrement',
-                          child: const Icon(Icons.remove),
-                        ),
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 30.0),
+                    child: Align(
+                      alignment: Alignment.bottomLeft,
+                      child: FloatingActionButton(
+                        onPressed: _decrementCounter,
+                        tooltip: 'Decrement',
+                        child: const Icon(Icons.remove),
                       ),
                     ),
                   ),
+                ),
                 Expanded(
                     child: Align(
                   alignment: Alignment.bottomRight,
